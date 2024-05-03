@@ -6,8 +6,8 @@ realOhmRes = 1050 #Ellenallas + tekercs ohmos ellenallasa
 dataQuant = 0
 
 plotSine = True
-plotSineAt = 70
+plotSineAt = 110
 
-clipData = False
+clipData = True
 clipAtFreqMax = 2000
 clipAtFreqMin = 0
