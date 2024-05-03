@@ -16,9 +16,9 @@ Paraméterek:
 Azt a konkrétat nézd, ami a mérésben volt (félretettem)
 Nevezetes érték -> tényleges, mért érték
 1000 Ohm -> 1035 Ohm
-250 Ohm
-2,2nF
-220pF
+250 Ohm -> 256 Ohm
+2,2uF -> 1.921 uF
+330pF -> Nem sikerült kimérni
 
 Egyébb:
 A tekercs ohmos ellenállása 15 Ohm
