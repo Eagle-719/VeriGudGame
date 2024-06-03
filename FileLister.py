@@ -7,5 +7,5 @@ def main_activity():
     for file_name in os.listdir(os.path.join("Measurments", Params.subfolder)):
         file_path = os.path.join("Measurments", Params.subfolder, file_name)
         file_names.write(file_path + '\n')
-
+    
     file_names.close()
