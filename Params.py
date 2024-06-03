@@ -1,12 +1,9 @@
-subfolder = "alu_1000_2.2uF"
-matName = "alu"
+subfolder = "Copper_Full"
+matName = "CopperFull"
+
+SampleRate = 125000000
 realOhmRes = 1050 #Ellenallas + tekercs ohmos ellenallasa
 #Kondenzatort merheted is mint ohmos ellenallast vagy illesztheted is
-
-dataQuant = 0
-
-plotSine = False
-plotSineAt = 110
 
 clipData = True
 clipAtFreqMax = 2000

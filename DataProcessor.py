@@ -4,7 +4,7 @@ import Params
 
 #CH3 a táp
 
-def fit_sin(tt, yy, second, j):
+def fit_sin(tt, yy):
     tt = np.array(tt)
     yy = np.array(yy)
     ff = np.fft.fftfreq(len(tt), (tt[1]-tt[0]))   # assume uniform spacing
@@ -28,46 +28,43 @@ def main_activity():
     processed_data = open("ProcessedData.txt", "w")
     processed_data.write("")
     processed_data.close()
-    j = 1
-    time = []
-    ch1 = []
-    ch2 = []
-    mat_amp = []
-    mat_phase = []
-    freqs = []
-
+    lineCounter = 1
     file_names = open("FileNames.txt")
     for line in file_names:
         current_file = open(line.strip())
+        
+        freqString = line
+
         time = []
-        ch1 = []
         ch2 = []
-
+        ch3 = []
         for row in current_file:
-            burst = row.split()
+            if lineCounter < 4:
+                pass
+            if lineCounter == 4:
+                pass
+            else:
+                burst = row.split(",")
 
-            time.append(float(burst[0]))
-            ch1.append(float(burst[1]))
-            ch2.append(float(burst[2]))
+                secTime = float(burst[0])*(1/Params.SampleRate)
+                time.append(secTime)
+                ch2.append(float(burst[1]))
+                ch3.append(float(burst[2]))
 
-        second = False
-        result = fit_sin(time, ch1, second, j)
-        second = True
-        result_2 = fit_sin(time, ch2, second, j)
-        j += 1
+        result = fit_sin(time, ch2)
+        result_2 = fit_sin(time, ch3)
 
-        amp_1 = result["amp"]
-        phase_1 = result["phase"]
-        amp_2 = result_2["amp"]
-        phase_2 = result_2["phase"]
-        freq = round(result_2["freq"])
+        amp_m = result["amp"]
+        phase_m = result["phase"]
+        amp_r = result_2["amp"]
+        phase_r = result_2["phase"]
 
-        phase = phase_1 - phase_2
+        phase = phase_m - phase_r
         #phase = np.degrees(phase)
-        amp = amp_1 / amp_2
-        mat_amp.append(amp)
-        mat_phase.append(phase)
-        freqs.append(freq)
+        amp = amp_m / amp_r
         processed_data = open("ProcessedData.txt", "a")
         processed_data.write(f"{amp} {phase} {freq}\n")
         processed_data.close()
+
+def stripFile():
+    pass
