@@ -1,9 +1,8 @@
 import numpy as np
 import scipy.optimize
-import pylab as plt
 import Params
 
-#CH2 a táp
+#CH3 a táp
 
 def fit_sin(tt, yy, second, j):
     tt = np.array(tt)
@@ -23,29 +22,7 @@ def fit_sin(tt, yy, second, j):
     f = w/(2.*np.pi)
     fitfunc = lambda t: A * np.sin(w*t + p) + c
 
-    if Params.plotSine:
-        plot(tt, yy, fitfunc, second, j)
-
     return {"amp": A, "omega": w, "phase": p, "offset": c, "freq": f, "period": 1./f, "fitfunc": fitfunc(tt)}
-
-def preplot(tt, yy, fitfunc):
-    plt.scatter(tt, yy, color='green', label='Voltage on R')
-    plt.plot(tt, fitfunc(tt), color='red', label='Fitted Curve')
-def plot_results(tt, yy, fitfunc):
-    plt.scatter(tt, yy, color='blue', label='Voltage on Circuit')
-    plt.plot(tt, fitfunc(tt), color='red', label='Fitted Curve')
-    plt.legend()
-    plt.xlabel('Time')
-    plt.ylabel('Amplitude')
-    plt.title('Fitted Sine Curves')
-    plt.show()
-
-def plot(tt, yy, fitfunc, second, j):
-    if j == Params.plotSineAt:
-        if second == False:
-            preplot(tt, yy, fitfunc)
-        else:
-            plot_results(tt, yy, fitfunc)
 
 def main_activity():
     processed_data = open("ProcessedData.txt", "w")
@@ -94,11 +71,3 @@ def main_activity():
         processed_data = open("ProcessedData.txt", "a")
         processed_data.write(f"{amp} {phase} {freq}\n")
         processed_data.close()
-
-    plt.scatter(freqs, mat_amp, color='blue', label='Sine Amp')
-    plt.scatter(freqs, mat_phase, color='red', label='Phase')
-    plt.legend()
-    plt.xlabel('Freqvency')
-    plt.ylabel('y')
-    plt.title('Amp and Phase')
-    plt.show()
