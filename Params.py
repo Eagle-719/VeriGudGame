@@ -1,5 +1,5 @@
-subfolder = "Copper_Full"
-matName = "CopperFull"
+subfolder = "Test"
+matName = "Test42k"
 
 SampleRate = 125000000
 realOhmRes = 1050 #Ellenallas + tekercs ohmos ellenallasa

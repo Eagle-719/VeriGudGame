@@ -34,6 +34,8 @@ def main_activity():
         current_file = open(line.strip())
         
         freqString = line
+        freq_temp = freqString.split("\\", 2)[2]
+        freq = freq_temp.split(".", 1)[0]
 
         time = []
         ch2 = []
