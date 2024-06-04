@@ -33,8 +33,7 @@ def main_activity():
     for line in file_names:
         current_file = open(line.strip())
         
-        freqString = line
-
+        freq = float(line.strip("\MeasurementsAluminiumCopperIronEmptySolidSmallBigTest_.csv.txt\n"))
         time = []
         ch2 = []
         ch3 = []
@@ -51,8 +50,8 @@ def main_activity():
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
 
-        result = fit_sin(time, ch2)
-        result_2 = fit_sin(time, ch3)
+        result = fit_sin(time, ch2, freq)
+        result_2 = fit_sin(time, ch3, freq)
 
         amp_m = result["amp"]
         phase_m = result["phase"]
