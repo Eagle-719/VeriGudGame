@@ -4,21 +4,22 @@ import Params
 
 #CH3 a táp
 
-def fit_sin(tt, yy):
+def fit_sin(tt, yy, amp, freq):
     tt = np.array(tt)
     yy = np.array(yy)
-    ff = np.fft.fftfreq(len(tt), (tt[1]-tt[0]))   # assume uniform spacing
-    Fyy = abs(np.fft.fft(yy))
-    guess_freq = abs(ff[np.argmax(Fyy[1:])+1])   # excluding the zero frequency "peak", which is related to offset
-    guess_amp = np.std(yy) * 2.**0.5
-    guess_offset = np.mean(yy)
-    guess = np.array([guess_amp, 2.*np.pi*guess_freq, 0., guess_offset])
+    A = amp
+    w = float(freq) * 2. * np.pi
+    c = 0
 
-    def sinfunc(t, A, w, p, c):
+    def sinfunc(t, p):
+        A = amp
+        w = float(freq)*2.*np.pi
+        c=0
+        print(amp, w, c)
         return A * np.sin(w*t + p) + c
 
-    popt, pcov = scipy.optimize.curve_fit(sinfunc, tt, yy, p0=guess)
-    A, w, p, c = popt
+    popt, pcov = scipy.optimize.curve_fit(sinfunc, tt, yy)
+    p = popt
     f = w/(2.*np.pi)
     fitfunc = lambda t: A * np.sin(w*t + p) + c
 
@@ -28,40 +29,54 @@ def main_activity():
     processed_data = open("ProcessedData.txt", "w")
     processed_data.write("")
     processed_data.close()
-    lineCounter = 1
+    lineCounter = 0
     file_names = open("FileNames.txt")
     for line in file_names:
         current_file = open(line.strip())
-        
-        freq = float(line.strip("\MeasurementsAluminiumCopperIronEmptySolidSmallBigTest_.csv.txt\n"))
+
+        freq_temp = line.split("\\", 2)[2]
+        freq = freq_temp.split(".", 1)[0]
+
         time = []
         ch2 = []
         ch3 = []
         for row in current_file:
-            if lineCounter < 4:
-                pass
-            elif lineCounter == 4:
-                pass
-            else:
+            if lineCounter < 3:
+                print(lineCounter)
+            if lineCounter == 3:
+                amp_string_ch2 = row.split(",", 2)[1]
+                amp_string_ch3 = row.split(",", 2)[2]
+                amp_string_ch2 = amp_string_ch2.replace("mV", "")
+                amp_ch2 = float(amp_string_ch2)/1000
+                amp_string_ch3 = amp_string_ch3.replace(".00V", "")
+                amp_ch3 = float(amp_string_ch3)
+                amp = amp_ch2/amp_ch3
+            if lineCounter > 3:
                 burst = row.split(",")
-
                 secTime = float(burst[0])*(1/Params.SampleRate)
                 time.append(secTime)
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
+            lineCounter += 1
 
-        result = fit_sin(time, ch2, freq)
-        result_2 = fit_sin(time, ch3, freq)
+        result = fit_sin(time, ch2, amp_ch2, freq)
+        result_2 = fit_sin(time, ch3, amp_ch3, freq)
+        print(result)
+        print(result_2)
 
-        amp_m = result["amp"]
         phase_m = result["phase"]
-        amp_r = result_2["amp"]
         phase_r = result_2["phase"]
-
+        print(phase_m)
+        print(phase_r)
         phase = phase_m - phase_r
-        #phase = np.degrees(phase)
-        amp = amp_m / amp_r
+        phase = np.degrees(phase)
+        phase = float(phase)
+        if phase < -90:
+            phase = phase +90
+        if phase > 90:
+            phase = phase -90
+        print(phase)
+
         processed_data = open("ProcessedData.txt", "a")
         processed_data.write(f"{amp} {phase} {freq}\n")
         processed_data.close()
-
