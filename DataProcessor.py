@@ -65,5 +65,3 @@ def main_activity():
         processed_data.write(f"{amp} {phase} {freq}\n")
         processed_data.close()
 
-def stripFile():
-    pass
