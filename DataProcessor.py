@@ -32,9 +32,8 @@ def main_activity():
     file_names = open("FileNames.txt")
     for line in file_names:
         current_file = open(line.strip())
-        
-        freqString = line
-        freq_temp = freqString.split("\\", 2)[2]
+
+        freq_temp = line.split("\\", 2)[2]
         freq = freq_temp.split(".", 1)[0]
 
         time = []
@@ -44,11 +43,18 @@ def main_activity():
             if lineCounter < 3:
                 print(lineCounter)
             if lineCounter == 3:
-                print("ampline")
+                amp_string_ch2 = row.split(",", 2)[1]
+                amp_string_ch3 = row.split(",", 2)[2]
+                print(amp_string_ch2)
+                print(amp_string_ch3)
+                amp_string_ch2 = amp_string_ch2.replace("mV", "")
+                amp_ch2 = float(amp_string_ch2)/1000
+                amp_string_ch3 = amp_string_ch3.replace(".00V", "")
+                amp_ch3 = float(amp_string_ch3)
+                amp = amp_ch2/amp_ch3
             if lineCounter > 3:
                 burst = row.split(",")
                 secTime = float(burst[0])*(1/Params.SampleRate)
-                print(secTime)
                 time.append(secTime)
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
@@ -57,17 +63,11 @@ def main_activity():
         result = fit_sin(time, ch2)
         result_2 = fit_sin(time, ch3)
 
-        amp_m = result["amp"]
         phase_m = result["phase"]
-        amp_r = result_2["amp"]
         phase_r = result_2["phase"]
-
         phase = phase_m - phase_r
         #phase = np.degrees(phase)
-        amp = amp_m / amp_r
+
         processed_data = open("ProcessedData.txt", "a")
         processed_data.write(f"{amp} {phase} {freq}\n")
         processed_data.close()
-
-def stripFile():
-    pass
