@@ -28,7 +28,7 @@ def main_activity():
     processed_data = open("ProcessedData.txt", "w")
     processed_data.write("")
     processed_data.close()
-    lineCounter = 1
+    lineCounter = 0
     file_names = open("FileNames.txt")
     for line in file_names:
         current_file = open(line.strip())
@@ -41,17 +41,18 @@ def main_activity():
         ch2 = []
         ch3 = []
         for row in current_file:
-            if lineCounter < 4:
-                pass
-            if lineCounter == 4:
-                pass
-            else:
+            if lineCounter < 3:
+                print(lineCounter)
+            if lineCounter == 3:
+                print("ampline")
+            if lineCounter > 3:
                 burst = row.split(",")
-
                 secTime = float(burst[0])*(1/Params.SampleRate)
+                print(secTime)
                 time.append(secTime)
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
+            lineCounter += 1
 
         result = fit_sin(time, ch2)
         result_2 = fit_sin(time, ch3)
