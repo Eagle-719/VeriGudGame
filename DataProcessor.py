@@ -72,9 +72,9 @@ def main_activity():
         phase = np.degrees(phase)
         phase = float(phase)
         if phase < -90:
-            phase = phase +90
+            phase = phase +180
         if phase > 90:
-            phase = phase -90
+            phase = phase -180
         print(phase)
 
         processed_data = open("ProcessedData.txt", "a")
