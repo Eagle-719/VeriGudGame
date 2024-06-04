@@ -4,7 +4,7 @@ import Params
 
 FileLister.main_activity()
 
-#DataProcessor.main_activity()
+DataProcessor.main_activity()
 
 '''if Params.clipData:
     DataClipper.main_activity()

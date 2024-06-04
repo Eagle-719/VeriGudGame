@@ -41,7 +41,7 @@ def main_activity():
         for row in current_file:
             if lineCounter < 4:
                 pass
-            if lineCounter == 4:
+            elif lineCounter == 4:
                 pass
             else:
                 burst = row.split(",")
