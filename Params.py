@@ -1,10 +1,10 @@
-subfolder = "Copper_Big"
-matName = "CopperBig"
+subfolder = "Aluminium_Solid"
+matName = "Al"
 
 SampleRate = 125000000
-realOhmRes = 1050 #Ellenallas + tekercs ohmos ellenallasa
+realOhmRes = 265 #Ellenallas + tekercs ohmos ellenallasa
 #Kondenzatort merheted is mint ohmos ellenallast vagy illesztheted is
 
-clipData = True
+clipData = False
 clipAtFreqMax = 2000
 clipAtFreqMin = 0
