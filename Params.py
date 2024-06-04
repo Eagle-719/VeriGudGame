@@ -1,4 +1,4 @@
-subfolder = "Aluminium_Solid"
+subfolder = "Copper_Big"
 matName = "Al"
 
 SampleRate = 125000000

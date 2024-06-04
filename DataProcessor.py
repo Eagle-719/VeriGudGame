@@ -29,14 +29,13 @@ def main_activity():
     processed_data = open("ProcessedData.txt", "w")
     processed_data.write("")
     processed_data.close()
-    lineCounter = 0
     file_names = open("FileNames.txt")
     for line in file_names:
         current_file = open(line.strip())
 
         freq_temp = line.split("\\", 2)[2]
         freq = freq_temp.split(".", 1)[0]
-
+        lineCounter = 0
         time = []
         ch2 = []
         ch3 = []
@@ -48,12 +47,13 @@ def main_activity():
                 amp_string_ch3 = row.split(",", 2)[2]
                 amp_string_ch2 = amp_string_ch2.replace("mV", "")
                 amp_ch2 = float(amp_string_ch2)/1000
-                amp_string_ch3 = amp_string_ch3.replace(".00V", "")
+                amp_string_ch3 = amp_string_ch3.replace("V", "")
                 amp_ch3 = float(amp_string_ch3)
                 amp = amp_ch2/amp_ch3
             if lineCounter > 3:
                 burst = row.split(",")
-                secTime = float(burst[0])*(1/Params.SampleRate)
+                IndTime = float(burst[0])
+                secTime = IndTime*(1/Params.SampleRate)
                 time.append(secTime)
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
