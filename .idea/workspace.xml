@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18792980-ace4-427e-8618-b0f62ed065d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ClippedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClippedData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MeasuredValues_FS_AMP.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MeasuredValues_FS_AMP.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MeasuredValues_FS_PHASE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MeasuredValues_FS_PHASE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Params.py" beforeDir="false" afterPath="$PROJECT_DIR$/Params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessedData.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +30,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Command.executor": "Run",
+    "Python.DataProcessor.executor": "Run",
     "Python.FileLister.executor": "Run",
     "Python.Params.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
