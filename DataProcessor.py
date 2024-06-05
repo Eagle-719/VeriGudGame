@@ -9,21 +9,20 @@ def fit_sin(tt, yy, amp, freq):
     yy = np.array(yy)
     A = amp
     w = float(freq) * 2. * np.pi
-    c = 0
+    f=float(freq)
 
     def sinfunc(t, p):
         A = amp
         w = float(freq)*2.*np.pi
-        c=0
-        print(amp, w, c)
-        return A * np.sin(w*t + p) + c
+        print(amp, w)
+        return A * np.sin(w*t + p)
 
     popt, pcov = scipy.optimize.curve_fit(sinfunc, tt, yy)
     p = popt
-    f = w/(2.*np.pi)
-    fitfunc = lambda t: A * np.sin(w*t + p) + c
+    #f = w/(2.*np.pi)
+    fitfunc = lambda t: A * np.sin(w*t + p)
 
-    return {"amp": A, "omega": w, "phase": p, "offset": c, "freq": f, "period": 1./f, "fitfunc": fitfunc(tt)}
+    return {"amp": A, "omega": w, "phase": p, "offset": 0., "freq": f, "period": 1./f, "fitfunc": fitfunc(tt)}
 
 def main_activity():
     processed_data = open("ProcessedData.txt", "w")
@@ -66,17 +65,22 @@ def main_activity():
 
         phase_m = result["phase"]
         phase_r = result_2["phase"]
-        print(phase_m)
-        print(phase_r)
+        '''while phase_m < -np.pi/2:
+            phase_m = phase_m+np.pi
+        while phase_m > np.pi/2:
+            phase_m = phase_m-np.pi
+        while phase_r < -np.pi/2:
+            phase_r = phase_r+np.pi
+        while phase_r > np.pi/2:
+            phase_r = phase_r-np.pi'''
         phase = phase_m - phase_r
-        phase = np.degrees(phase)
-        phase = float(phase)
-        if phase < -90:
-            phase = phase +90
-        if phase > 90:
-            phase = phase -90
+        phase = np.rad2deg(float(phase))
+        while phase > 90:
+            phase = phase - 180
+        while phase < -90:
+            phase = phase +180
         print(phase)
 
         processed_data = open("ProcessedData.txt", "a")
-        processed_data.write(f"{amp} {phase} {freq}\n")
+        processed_data.write(f"{freq} {amp} {phase_m} {phase_r}\n")
         processed_data.close()
