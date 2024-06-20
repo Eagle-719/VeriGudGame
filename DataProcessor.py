@@ -9,7 +9,7 @@ def fit_sin(tt, yy, amp, freq):
     yy = np.array(yy)
     A = amp
     w = float(freq) * 2. * np.pi
-    f=float(freq)
+    f = float(freq)
 
     def sinfunc(t, p):
         A = amp
