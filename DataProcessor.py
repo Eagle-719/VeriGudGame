@@ -1,6 +1,7 @@
 import numpy as np
 import scipy.optimize
 import Params
+import matplotlib.pyplot as plt
 
 #CH3 a táp
 
@@ -31,6 +32,9 @@ def main_activity():
     processed_data = open("ProcessedData.txt", "w")
     processed_data.write("")
     processed_data.close()
+    freqs = []
+    amps = []
+    phases = []
     file_names = open("FileNames.txt")
     for line in file_names:
         current_file = open(line.strip())
@@ -52,6 +56,10 @@ def main_activity():
                 amp_string_ch3 = amp_string_ch3.replace("V", "")
                 amp_ch3 = float(amp_string_ch3)
                 amp = amp_ch2/amp_ch3
+                print(amp_ch2)
+                print(amp_ch3)
+                freqs.append(freq)
+                amps.append(amp)
             if lineCounter > 3:
                 burst = row.split(",")
                 IndTime = float(burst[0])
@@ -63,8 +71,6 @@ def main_activity():
 
         result = fit_sin(time, ch2)
         result_2 = fit_sin(time, ch3)
-        print(result)
-        print(result_2)
 
         phase_m = result["phase"]
         phase_r = result_2["phase"]
@@ -83,7 +89,19 @@ def main_activity():
         while phase < -90:
             phase = phase +180
         print(phase)
+        phases.append(phase)
+
 
         processed_data = open("ProcessedData.txt", "a")
         processed_data.write(f"{freq} {amp} {phase_m} {phase_r}\n")
         processed_data.close()
+
+    plt.scatter(freqs, amps, color='blue', label='Amp')
+    plt.scatter(freqs, phases, color='red', label='Phase')
+    plt.legend()
+    plt.xlabel('Freqvency')
+    plt.ylabel('y')
+    plt.title('Amp and Phase')
+    plt.show()
+
+main_activity()
