@@ -1,5 +1,5 @@
-subfolder = "Copper_Big"
-matName = "Fe"
+subfolder = "Aluminium_Solid"
+matName = "Al"
 
 SampleRate = 125000000
 realOhmRes = 265 #Ellenallas + tekercs ohmos ellenallasa

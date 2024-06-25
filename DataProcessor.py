@@ -74,14 +74,6 @@ def main_activity():
 
         phase_m = result["phase"]
         phase_r = result_2["phase"]
-        '''while phase_m < -np.pi/2:
-            phase_m = phase_m+np.pi
-        while phase_m > np.pi/2:
-            phase_m = phase_m-np.pi
-        while phase_r < -np.pi/2:
-            phase_r = phase_r+np.pi
-        while phase_r > np.pi/2:
-            phase_r = phase_r-np.pi'''
         phase = phase_m - phase_r
         phase = np.rad2deg(float(phase))
         while phase > 90:
