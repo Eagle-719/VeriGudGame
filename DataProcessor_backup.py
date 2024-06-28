@@ -46,11 +46,6 @@ def main_activity():
         ch2 = []
         ch3 = []
         for row in current_file:
-            lineCounter = lineCounter + 1
-        numberOfLines = lineCounter - 3
-        DeltaTime = float(Params.FullTime)/1000000/(numberOfLines-1)
-        lineCounter = 0
-        for row in current_file:
             if lineCounter < 3:
                 print(lineCounter)
             if lineCounter == 3:
@@ -67,8 +62,8 @@ def main_activity():
                 amps.append(amp)
             if lineCounter > 3:
                 burst = row.split(",")
-                IndTime = float(burst[0]) - (numberOfLines - 1)/2
-                secTime = IndTime*(DeltaTime)
+                IndTime = float(burst[0])
+                secTime = IndTime*(1/Params.SampleRate)
                 time.append(secTime)
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
@@ -90,15 +85,17 @@ def main_activity():
 
 
         processed_data = open("ProcessedData.txt", "a")
-        processed_data.write(f"{freq} {amp} {phase_m} {phase_r}\n")
+        processed_data.write(f"{freq} {amp} {phase_m} {phase_r} {phase}\n")
         processed_data.close()
 
-    plt.scatter(freqs, amps, color='blue', label='Amp')
+    plt.scatter(freqs, amps, color='blue', label='Measured V')
+    plt.xticks(freqs)
     #plt.scatter(freqs, phases, color='red', label='Phase')
+    #plt.scatter({freq}, amps, color='red', label='Fitted V')
     plt.legend()
     plt.xlabel('Freqvency')
     plt.ylabel('y')
     plt.title('Amp and Phase')
     plt.show()
 
-main_activity()
+#main_activity()
