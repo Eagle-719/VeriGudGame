@@ -1,9 +1,9 @@
-subfolder = "Iron_Small"
-matName = "Empty"
+subfolder = "R20_Fe"
+matName = "Fe"
 
 FullTime = 76 #Empty: 152 us [76]
 SampleRate = 125000000 #Empty: 50.000.000 samp/sec [125]
-realOhmRes = 289
+realOhmRes = 500
 realOhmInd = 16,4 #Capacitor?
 
 clipData = False
