@@ -90,7 +90,7 @@ def main_activity():
 
     plt.scatter(freqs, amps, color='blue', label='Measured V')
     plt.xticks(freqs)
-    #plt.scatter(freqs, phases, color='red', label='Phase')
+    plt.scatter(freqs, phases, color='red', label='Phase')
     #plt.scatter({freq}, amps, color='red', label='Fitted V')
     plt.legend()
     plt.xlabel('Freqvency')

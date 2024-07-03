@@ -46,13 +46,8 @@ def main_activity():
         ch2 = []
         ch3 = []
         for row in current_file:
-            lineCounter = lineCounter + 1
-        numberOfLines = lineCounter - 3
-        DeltaTime = float(Params.FullTime)/1000000/(numberOfLines-1)
-        lineCounter = 0
-        for row in current_file:
             if lineCounter < 3:
-                print(lineCounter)
+                pass
             if lineCounter == 3:
                 amp_string_ch2 = row.split(",", 2)[1]
                 amp_string_ch3 = row.split(",", 2)[2]
@@ -61,14 +56,12 @@ def main_activity():
                 amp_string_ch3 = amp_string_ch3.replace("V", "")
                 amp_ch3 = float(amp_string_ch3)
                 amp = amp_ch2/amp_ch3
-                print(amp_ch2)
-                print(amp_ch3)
                 freqs.append(freq)
                 amps.append(amp)
             if lineCounter > 3:
                 burst = row.split(",")
-                IndTime = float(burst[0]) - (numberOfLines - 1)/2
-                secTime = IndTime*(DeltaTime)
+                IndTime = float(burst[0])
+                secTime = IndTime*(1/Params.SampleRate)
                 time.append(secTime)
                 ch2.append(float(burst[1]))
                 ch3.append(float(burst[2]))
@@ -79,8 +72,10 @@ def main_activity():
 
         phase_m = result["phase"]
         phase_r = result_2["phase"]
-        phase = phase_m - phase_r
+        print(np.rad2deg(float(phase_m)), np.rad2deg(float(phase_r)))
+        phase = float(phase_m) - float(phase_r)
         phase = np.rad2deg(float(phase))
+
         while phase > 90:
             phase = phase - 180
         while phase < -90:
@@ -90,11 +85,13 @@ def main_activity():
 
 
         processed_data = open("ProcessedData.txt", "a")
-        processed_data.write(f"{freq} {amp} {phase_m} {phase_r}\n")
+        processed_data.write(f"{freq} {amp} {phase_m} {phase_r} {phase}\n")
         processed_data.close()
 
-    plt.scatter(freqs, amps, color='blue', label='Amp')
-    #plt.scatter(freqs, phases, color='red', label='Phase')
+    plt.scatter(freqs, amps, color='blue', label='Measured V')
+    plt.xticks(freqs)
+    plt.scatter(freqs, phases, color='red', label='Phase')
+    #plt.scatter({freq}, amps, color='red', label='Fitted V')
     plt.legend()
     plt.xlabel('Freqvency')
     plt.ylabel('y')
