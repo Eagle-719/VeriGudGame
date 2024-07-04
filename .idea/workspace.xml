@@ -5,8 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18792980-ace4-427e-8618-b0f62ed065d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/FileNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProcessorN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataVisualisation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileLister.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileNames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/10Empty.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/1Cu_Solid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/2Cu_Small.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/3Cu_Big.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/4Al_Solid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/5Al_Small.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/6Al_Big.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/7Fe_Solid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/8Fe_Small.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/9Fe_Big.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C2_Al.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C2_Cu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C2_Empty.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C2_Fe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C3_Al.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C3_Cu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C3_Empty.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/C3_Fe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/R20_Al.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/R20_Cu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/R20_Fe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/R21_Al.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData/R21_Cu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Al_Big.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Al_Small.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Al_Solid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_C2_Al.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_C3_Al.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Cu_Big.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Cu_Small.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Cu_Solid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Empty.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Fe_Big.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Fe_Small.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_Fe_Solid.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/ProcessedData_R20_Fe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Aluminium_Big_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Aluminium_Small_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Aluminium_Solid_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Copper_Big_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Copper_Small_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Copper_Solid_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Empty_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Iron_Big_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Iron_Small_results.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measurements/Results/Wolfram fitting/Iron_Solid_results.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Params.py" beforeDir="false" afterPath="$PROJECT_DIR$/Params.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/delta R testing.nb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/woflram fitting.nb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
