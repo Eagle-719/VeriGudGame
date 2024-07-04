@@ -5,11 +5,7 @@ import Params
 
 def ampfunction(f, L, C, dR):
     f = f * np.array(2) * np.pi
-    f = np.asarray(f)
-    L = float(L)
     R = float(Params.realOhmRes)
-    C = float(C)
-    dR = float(dR)
     return R / (np.sqrt(np.square(R + dR) + np.square(L * f - (1 / (C * f)))))
 
 def main_activity():
