@@ -1,7 +1,7 @@
 ,CH2(Unit:V),CH3(Unit:V)
 Frequency:,69.600 kHz,69.600 kHz
 Period:,14.368 uS,14.368 uS
-PK-PK:,1.17V,4.88V
+PK-PK:,1170mV,4.88V
 1,0.264,1.960
 2,0.288,2.000
 3,0.240,1.880
