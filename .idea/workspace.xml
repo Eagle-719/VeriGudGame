@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AMP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AMP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AmpFit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AmpFit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Params.py" beforeDir="false" afterPath="$PROJECT_DIR$/Params.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +35,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.AMP.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Command.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DataProcessor.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DataProcessorN.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DataProcessor_backup.executor&quot;: &quot;Run&quot;,
-    &quot;Python.FileLister.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Params.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Phase.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alfre/Documents/GitHub/VeriGudGame&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.AMP.executor": "Run",
+    "Python.Command.executor": "Run",
+    "Python.DataProcessor.executor": "Run",
+    "Python.DataProcessorN.executor": "Run",
+    "Python.DataProcessor_backup.executor": "Run",
+    "Python.FileLister.executor": "Run",
+    "Python.Params.executor": "Run",
+    "Python.Phase.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/alfre/Documents/Test",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
