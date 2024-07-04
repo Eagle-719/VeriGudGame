@@ -1,12 +1,10 @@
-import numpy as np
-import scipy.optimize
 import Params
 import matplotlib.pyplot as plt
 
 #CH3 a táp
 
 def main_activity():
-    processed_data = open("ProcessedData.txt", "w")
+    processed_data = open(Params.ResultsPath, "w")
     processed_data.write("")
     processed_data.close()
     freqs = []
@@ -24,7 +22,7 @@ def main_activity():
         ch3 = []
         for row in current_file:
             if lineCounter < 3:
-                print(lineCounter)
+                pass
             if lineCounter == 3:
                 amp_string_ch2 = row.split(",", 2)[1]
                 amp_string_ch3 = row.split(",", 2)[2]
@@ -46,7 +44,7 @@ def main_activity():
                 ch3.append(float(burst[2]))
             lineCounter += 1
 
-        processed_data = open("ProcessedData.txt", "a")
+        processed_data = open(Params.ResultsPath, "a")
         processed_data.write(f"{freq} {amp}\n")
         processed_data.close()
 
