@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18792980-ace4-427e-8618-b0f62ed065d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AMP_Fast.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AMP.py" beforeDir="false" afterPath="$PROJECT_DIR$/AMP.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AmpFit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AmpFit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Command.py" beforeDir="false" afterPath="$PROJECT_DIR$/Command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProcessorN.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataProcessorN.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FileNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Measurements/R21_Al/69400!!!.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Measurements/R21_Al/73000!!!.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileLister.py" beforeDir="false" afterPath="$PROJECT_DIR$/FileLister.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Params.py" beforeDir="false" afterPath="$PROJECT_DIR$/Params.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/C2_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/C2_Cu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/C2_Empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/C2_Empty.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/C3_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/C3_Cu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/C3_Empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/C3_Empty.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/C3_Fe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/C3_Fe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/R20_Al.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/R20_Al.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/R20_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/R20_Cu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/R20_Empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/R20_Empty.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/R21_Al.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/R21_Al.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/R21_Cu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/R21_Cu.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/ProcessedData/R21_Empty.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Results/ProcessedData/R21_Empty.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +39,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.AMP.executor": "Run",
+    "Python.AMP_Fast.executor": "Run",
     "Python.Command.executor": "Run",
     "Python.DataPRes.executor": "Run",
     "Python.DataProcessor.executor": "Run",
