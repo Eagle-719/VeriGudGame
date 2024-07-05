@@ -10,7 +10,7 @@ def ampfunction(f, L, C, dR):
     #R = float(Params.realOhmRes)
     C = float(C)
     dR = float(dR)
-    return 289 / (np.sqrt(np.square(289 + dR) + np.square(L * f - (1 / (C * f)))))
+    return ((289) / (np.sqrt(np.square(289 + dR) + np.square((L * f) - (1 / (C * f))))))
 
 def main_activity():
     processed_data = open(Params.ResultsPath, "r")
@@ -24,7 +24,7 @@ def main_activity():
         amp_values.append(float(burst[1]))
         freq_values.append(float(burst[0]))
 
-    popt, pcov = scipy.optimize.curve_fit(ampfunction, freq_values, amp_values, p0=(0.02, 0.0000022, 0))
+    popt, pcov = scipy.optimize.curve_fit(ampfunction, freq_values, amp_values, p0=(0.04, 0.000000000220, 700))
     freq_smooth = np.linspace(min(freq_values), max(freq_values), 1000)
     amp_smooth = ampfunction(freq_smooth, *popt)
 
