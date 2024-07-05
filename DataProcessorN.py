@@ -36,11 +36,9 @@ def main_activity():
                     amp_ch2 = float(amp_string_ch2)
                 if '?' in amp_string_ch2:
                     amp_string_ch2 = amp_string_ch2.replace(" ?", "")
-                print(amp_string_ch2)
                 amp_string_ch3 = amp_string_ch3.replace("V", "")
                 amp_ch3 = float(amp_string_ch3)
                 amp = amp_ch2/amp_ch3
-                print(amp_ch2)
                 freqs.append(freq)
                 amps.append(amp)
             if lineCounter > 3:
