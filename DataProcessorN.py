@@ -26,16 +26,21 @@ def main_activity():
             if lineCounter == 3:
                 amp_string_ch2 = row.split(",", 2)[1]
                 amp_string_ch3 = row.split(",", 2)[2]
+                if '?' in amp_string_ch2:
+                    amp_string_ch2 = amp_string_ch2.replace(" ?", "")
                 if 'm' in amp_string_ch2:
                     amp_string_ch2 = amp_string_ch2.replace("mV", "")
                     amp_ch2 = float(amp_string_ch2) / 1000
                 else:
                     amp_string_ch2 = amp_string_ch2.replace("V", "")
+                    amp_ch2 = float(amp_string_ch2)
+                if '?' in amp_string_ch2:
+                    amp_string_ch2 = amp_string_ch2.replace(" ?", "")
+                print(amp_string_ch2)
                 amp_string_ch3 = amp_string_ch3.replace("V", "")
                 amp_ch3 = float(amp_string_ch3)
                 amp = amp_ch2/amp_ch3
                 print(amp_ch2)
-                print(amp_ch3)
                 freqs.append(freq)
                 amps.append(amp)
             if lineCounter > 3:

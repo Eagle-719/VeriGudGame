@@ -48,5 +48,3 @@ def main_activity():
     plt.show()
 
     measured_values.close()
-
-main_activity()
